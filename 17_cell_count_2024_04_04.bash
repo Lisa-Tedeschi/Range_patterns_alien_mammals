@@ -4,7 +4,6 @@
 
 # created on 16.07.2022 by LT
 # modified on 06.04.2023, 14.12.2023, and 04.04.2024 
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a GRASS GIS script to count cells of PAR, OAR, POAR, range filling, unfilling, and overfilling
@@ -23,9 +22,9 @@
 #                                                           #
 # - # - # - # - # - # - # - # - # - # - # - # - # - # - # - #
 
-#grass /home/biodiversity/tedeschil/grass/3035/PERMANENT
+#grass /home/biodiversity/grass/3035/PERMANENT
 #g.mapset mapset=PERMANENT location=3035
-wd=/home/biodiversity/tedeschil/grass/Sensitivity_analysis
+wd=/home/biodiversity/grass/Sensitivity_analysis
 
 
 
@@ -49,8 +48,8 @@ do
 	echo "===================== REMOVE FILES ======="
 	g.remove -f type=raster name=$sp'_fil',$sp'_unf',$sp'_ove'
 	echo "===================== DONE $sp STATISTICS =======" 
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt # species list 
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt # txt file with the different combinations: 
+	done < /home/biodiversity/grass/List_eu_neozoa.txt # species list 
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt # txt file with the different combinations: 
 # median dispersal distance and generation length ("Disp_gen")
 # median dispersal distance and age at first reproduction ("Disp_age")
 # maximum dispersal distance and generation length ("MaxDisp_gen")
@@ -98,8 +97,8 @@ do
 	echo "===================== REMOVE FILES ======="
 	g.remove -f type=raster name=$sp'_OAR',$sp'_PAR',$sp'_PAR_suit',$sp'_POAR'
 	echo "===================== DONE $sp STATISTICS =======" 
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt # species list 
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt
+	done < /home/biodiversity/grass/List_eu_neozoa.txt # species list 
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt
 
 
 
@@ -155,8 +154,8 @@ do
 	db.out.ogr --o input=$sp'_unf' output=$wd'/'$scen'/Variables/Variables_stats/Polygons_cells_no/Range_unfilling/'$sp'_unf.csv' format=CSV
 	echo "===================== CLEAN $sp ======="
 	g.remove -f type=raster,vector pattern=$sp i=EU_3035
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt # species list 
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt
+	done < /home/biodiversity/grass/List_eu_neozoa.txt # species list 
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt
 
 # to check if the column has been added
 db.columns table=Ammotragus_lervia_ove
