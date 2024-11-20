@@ -4,7 +4,6 @@
 
 # Started on 14.12.2023
 # modified on 03.04.2024
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to load the ensemble models' projections and create a raster (.tif) 
