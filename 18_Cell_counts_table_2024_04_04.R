@@ -2,9 +2,8 @@
 ######################## CELL COUNTS ##########################
 ###############################################################
 
-# started on 20.07.2022 by LT 
+# started on 20.07.2022 
 # modified on 06.04.2023, 24.11.2023, 14.12.2023, and 04.04.2024
-# by LT 
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to take the .csv output of r.stats of range filling, unfilling, and overfilling rasters from GRASS for each species 
