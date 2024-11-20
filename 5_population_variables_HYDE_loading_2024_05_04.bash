@@ -4,15 +4,14 @@
 
 # started on 23.06.2023
 # modified on 04.05.2024
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a loop to load the HYDE variables Population density, crop and reproject to Europe
 
-#grass /home/biodiversity/tedeschil/grass/3035/PERMANENT
-#grass /home/biodiversity/tedeschil/grass/4326/PERMANENT 
+#grass /home/biodiversity/grass/3035/PERMANENT
+#grass /home/biodiversity/grass/4326/PERMANENT 
 #g.mapset mapset=PERMANENT location=3035
-wd=/home/biodiversity/tedeschil/grass/Sensitivity_analysis/Data
+wd=/home/biodiversity/grass/Sensitivity_analysis/Data
 
 # in HYDE dataset  
 # popc = population counts, in inhabitants/gridcell
