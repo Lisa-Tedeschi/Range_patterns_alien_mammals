@@ -4,7 +4,6 @@
 
 # Started on 05.04.2023
 # modified on 04.04.2024
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # Setting up the R environment
