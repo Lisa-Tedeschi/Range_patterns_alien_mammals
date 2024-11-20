@@ -4,7 +4,6 @@
 
 # Started on 08.03.2023
 # modified on 03.04.2024
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to create a "biasfile" that accounts for different efforts in sampling
@@ -75,7 +74,7 @@ biasfile <- terra::merge(biasfile, belt)
 plot(biasfile)
 summary(biasfile)
 
-writeRaster(biasfile, "./Data/Processed/biasfile_LT.tif")
+writeRaster(biasfile, "./Data/Processed/biasfile_new.tif")
 
 
 
