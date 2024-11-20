@@ -3,8 +3,8 @@
 ############################################################################
 
 # Started on 21.12.2022
-# modified on 03.04.2024 by LT
-# by LT, based on Appendix S1 of Ficetola et al. 2015 (https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fjbi.12206&file=jbi12206-sup-0001-AppendixS1-corrected.txt)
+# modified on 03.04.2024
+# based on Appendix S1 of Ficetola et al. 2015 (https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fjbi.12206&file=jbi12206-sup-0001-AppendixS1-corrected.txt)
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe" 
 
 #% DESCRIPTION: GRASS script to calculate the distance of points in shapefiles
@@ -50,9 +50,9 @@
 
 # NB: the DAMA .shp need to be adjusted to be read in GRASS (i.e., change "Order" column name, and so on) 
 
-#grass /home/biodiversity/tedeschil/grass/4326/PERMANENT 
+#grass /home/biodiversity/grass/4326/PERMANENT 
 #g.mapset mapset=PERMANENT location=4326
-wd=/home/biodiversity/tedeschil/grass/Sensitivity_analysis
+wd=/home/biodiversity/grass/Sensitivity_analysis
 
 
 ## Spatial intersection analysis for a single set of polygons containing both IUCN and DAMA, with the addition of the category of the polygon
@@ -82,4 +82,4 @@ echo "===================== EXPORT ATTRIBUTE TABLE FOR $sp ======="
 db.out.ogr --o --verbose input=$j output=$wd'/Data/Processed/Distances/Distances_aggregated_1981_2022_categories/'$sp format=CSV 
 echo "===================== REMOVE FILES =======" 
 g.remove -f type=vector pattern=$sp*
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/Data/Processed/List_eu.txt
+done < /home/biodiversity/grass/Sensitivity_analysis/Data/Processed/List_eu.txt
