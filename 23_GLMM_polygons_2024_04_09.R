@@ -4,7 +4,6 @@
 
 # Started on 08.08.2023
 # modified on 09.04.2024
-# by LT 
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to perform a glmm to see if the filling patterns are influenced by the introduction history (pathways of introduction, native range size...)
