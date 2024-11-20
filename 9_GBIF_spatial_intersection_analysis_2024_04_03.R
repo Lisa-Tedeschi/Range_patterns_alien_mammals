@@ -4,7 +4,6 @@
 
 # Started on 20.01.2023
 # modified on 03.04.2024
-# by LT (with improvements of AS)
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to remove the extreme 1% of GBIF points
