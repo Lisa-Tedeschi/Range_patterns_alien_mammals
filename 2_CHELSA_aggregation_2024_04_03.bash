@@ -4,14 +4,13 @@
 
 # Started on 25.01.2023
 # modified on 03.04.2024
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # This is a script to aggregate an (updated) Chelsa raster from a finer to coarser resolution in GRASS GIS
 
-#grass /home/biodiversity/tedeschil/grass/3035/PERMANENT
+#grass /home/biodiversity/grass/3035/PERMANENT
 #g.mapset mapset=PERMANENT location=3035
-wd=/home/biodiversity/tedeschil/grass/Sensitivity_analysis
+wd=/home/biodiversity/grass/Sensitivity_analysis
 
 for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 do
