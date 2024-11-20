@@ -4,7 +4,6 @@
 
 # Started on 11.11.2022
 # modified on 03.04.2024
-# by LT (with improvements of AS)
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to download, clean, filter, explore GBIF data
