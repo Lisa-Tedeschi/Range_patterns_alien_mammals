@@ -4,7 +4,6 @@
 
 # Started on 07.03.2023
 # modified on 03.04.2024
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to assign a continent region to each species
