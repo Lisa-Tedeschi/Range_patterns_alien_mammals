@@ -4,7 +4,6 @@
 
 # Started on 11.05.2023 
 # modified on 14.12.2023 (to use the new ranges obtained using the binary maps of biomod), and 08.04.2024
-# by LT 
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to collate the information such as species' traits (generation length, age at first reproduction, dispersal), 
