@@ -6,7 +6,6 @@
 
 # created on 24.11.2023 
 # modified on 04.04.2024 
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a GRASS GIS script to import the predicted alien ranges (PAR) 
@@ -40,7 +39,7 @@
 
 #grass /home/biodiversity/tedeschil/grass/3035/PERMANENT
 #g.mapset mapset=PERMANENT location=3035
-wd=/home/biodiversity/tedeschil/grass/Sensitivity_analysis
+wd=/home/biodiversity/grass/Sensitivity_analysis
 
 
 
@@ -85,8 +84,8 @@ do
 	g.remove -f type=raster name=$sp'_PAR',$sp'_bin',$sp'_PAR_suit'
 	r.mask -r
 	echo "===================== DONE $sp_PAR RASTERIZATION =======" 
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt # species list 
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt # txt file with the different combinations: 
+	done < /home/biodiversity/grass/List_eu_neozoa.txt # species list 
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt # txt file with the different combinations: 
 # median dispersal distance and generation length ("Disp_gen")
 # median dispersal distance and age at first reproduction ("Disp_age")
 # maximum dispersal distance and generation length ("MaxDisp_gen")
