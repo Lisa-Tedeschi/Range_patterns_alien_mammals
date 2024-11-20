@@ -4,7 +4,6 @@
 
 # created on 08.03.2023
 # modified on 04.04.2024 
-# by LT
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a GRASS GIS script to create rasters of:
@@ -14,9 +13,9 @@
 # and vectorize them 
 # for different combinations of dispersal (median and max) and reproduction (generation length and age at first reproduction)
 
-#grass /home/biodiversity/tedeschil/grass/3035/PERMANENT
+#grass /home/biodiversity/grass/3035/PERMANENT
 #g.mapset mapset=PERMANENT location=3035
-wd=/home/biodiversity/tedeschil/grass/Sensitivity_analysis
+wd=/home/biodiversity/grass/Sensitivity_analysis
 
 
 
@@ -46,8 +45,8 @@ do
 	echo "===================== REMOVE FILES ======="
 	r.mask -r
 	g.remove -f type=raster name=$sp'_PAR_suit',$sp'_OAR'
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt # species list 
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt # txt file with the different combinations: 
+	done < /home/biodiversity/grass/List_eu_neozoa.txt # species list 
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt # txt file with the different combinations: 
 # median dispersal distance and generation length ("Disp_gen")
 # median dispersal distance and age at first reproduction ("Disp_age")
 # maximum dispersal distance and generation length ("MaxDisp_gen")
@@ -86,8 +85,8 @@ do
 	echo "===================== REMOVE MASK AND $sp_PAR_suit =======" 
 	r.mask -r
 	g.remove -f type=raster name=$sp'_PAR_suit',$sp'_OAR',$sp'_ove',$sp'_mask'
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt
+	done < /home/biodiversity/grass/List_eu_neozoa.txt
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt
 
 
 
@@ -122,8 +121,8 @@ do
 	echo "===================== REMOVE MASK AND $sp_PAR_suit =======" 
 	r.mask -r
 	g.remove -f type=raster name=$sp'_PAR_suit',$sp'_OAR',$sp'_unf',$sp'_mask'
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt
+	done < /home/biodiversity/grass/List_eu_neozoa.txt
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt
 
 
 
@@ -163,8 +162,8 @@ do
 	v.out.ogr --o input=$sp'_ove' output=$wd'/'$scen'/Range_overfilling/'$sp'_ove.gpkg' format=GPKG
 	echo "===================== REMOVE FILES ======="
 	g.remove -f type=vector,raster name=$sp'_fil',$sp'_unf',$sp'_ove'
-	done < /home/biodiversity/tedeschil/grass/List_eu_neozoa.txt
-done < /home/biodiversity/tedeschil/grass/Sensitivity_analysis/scenarios.txt
+	done < /home/biodiversity/grass/List_eu_neozoa.txt
+done < /home/biodiversity/grass/Sensitivity_analysis/scenarios.txt
 
 
 
