@@ -4,7 +4,6 @@
 
 # Started on 01.03.2023
 # modified on 04.04.2024
-# by LT (with code from JW)
 # for the paper "Patterns and drivers of range filling of alien mammals in Europe"
 
 # this is a script to perform Species Distribution Models (SDMs) on the server 
@@ -34,7 +33,7 @@ sp <- args[1]
 library(pacman)
 pacman::p_load(tidyverse, devtools, gridExtra, scales, corrplot, sdmpredictors, usdm, terra, readr, sf, maps, biomod2, dismo, colorRamps, CoordinateCleaner, stringr, hrbrthemes, forcats, cowplot)
 
-setwd("/home/biodiversity/tedeschil/SDM_problayer")
+setwd("/home/biodiversity/SDM_problayer")
 
 
 
@@ -56,7 +55,7 @@ setwd("/home/biodiversity/tedeschil/SDM_problayer")
 cont_names <- c("Africa", "Antarctica", "Asia", "Europe", "North_America", "Oceania", "Seven_seas", "South_America")
 IUCN_poly <- read.csv("../grass/Sensitivity_analysis/Data/Processed/IUCN_ranges_in_continents.csv", sep = ",", h = T) 
 DAMA_poly <- read.csv("../grass/Sensitivity_analysis/Data/Processed/DAMA_ranges_in_continents.csv", sep = ",", h = T) 
-biasfile <- stack("../grass/Sensitivity_analysis/Data/Processed/biasfile_LT.tif")
+biasfile <- stack("../grass/Sensitivity_analysis/Data/Processed/biasfile_new.tif")
 
 
 
@@ -202,7 +201,7 @@ myBiomodData <- BIOMOD_FormatingData(resp.name = sp,
                                      #dir.name = "./Models",
                                      resp.xy = myRespCoord, # 2 column df with coordinates of resp.var
                                      PA.nb.rep = 5, # This should be set to 0 only if absence data are available (no pseudo-absence will be extracted)
-                                     PA.nb.absences = PAs_number, # same as the presences #QUESTION: insert an if statement like if(length(myresp) >= 300){1000}else{100} ? And how do I weight equally presences and PAs?
+                                     PA.nb.absences = PAs_number, # same as the presences 
                                      PA.strategy = "random",
                                      na.rm = T)
 
