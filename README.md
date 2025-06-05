@@ -19,4 +19,4 @@ Corresponding author: Lisa Tedeschi (lisa.tedeschi@univie.ac.at)
 Franz Essl + and Carlo Rondinini + should be considered joint senior authors.
 
 This repository contains the code for the analyses of the paper "Patterns and drivers of range filling of alien mammals in Europe", published in Oikos.
-The data that supports the findings of this study are available in the Supporting information of the paper and in the Supplementary Data (downloadable from this repository).
+The data that supports the findings of this study are available in the Supporting information of the paper and in the Supplementary Data (available on Dryad at: https://doi.org/10.5061/dryad.wstqjq2zh).
